@@ -1,0 +1,6 @@
+{
+    "exec": "set PORT=3060 && ts-node ./index.ts",
+    "ignore": ["node_modules"],
+    "watch": ["src"],
+    "ext":"ts"
+}
