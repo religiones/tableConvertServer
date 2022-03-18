@@ -31,7 +31,6 @@ class userController {
      */
     public addUser = async (req: Request, res: Response) => {
         const user = req.body;
-        console.log(user)
         this.userService.addUser(user).then((data: any) => {
             res.send({
                 status: STATUS.SUCCESS,

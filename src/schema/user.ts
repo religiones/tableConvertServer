@@ -30,7 +30,7 @@ export const UserSchema = new Schema({
     },
     sex: {
         type: String,
-        enum: ['男, 女']
+        enum: ['男', '女']
     },
     create_date: {
         type: Date,

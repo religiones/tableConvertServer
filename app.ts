@@ -9,12 +9,12 @@ class App {
     public app: express.Application;
     constructor() {
         this.app = express();
-        this.app.use(routes);   // 使用路由
         this.app.use(cors({     // 设置cors跨域
             origin: "*"
         }));
         this.app.use(bodyParser.json());    // 支持 application/json 类型
         this.app.use(bodyParser.urlencoded({extended: false}));     // 支持 application/x-ww-form-urlencoded
+        this.app.use(routes);   // 使用路由
         this.setMongoConfig();      // 连接数据库
     }
 

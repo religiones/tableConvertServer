@@ -23,13 +23,16 @@ class UserModel {
     // 插入数据
     public insertOne = (user: any) => {
         return new Promise(resolve => {
-            let user = UserSchema;
             userReponsitory.create(user, (err: any, data: any) => {
                 if(!err){
+                    console.log(data);
                     user = data;
+                    resolve(user);
+                }else{
+                    console.log(err);
                 }
-                resolve(user);
-            })
+                
+            });
         });
     }
 }
